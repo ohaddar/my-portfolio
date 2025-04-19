@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    domains: ["todo-list-theta-brown.vercel.app"],
+  },
 };
 
 export default nextConfig;

@@ -13,7 +13,7 @@ const About = () => {
           viewport={{ once: true }}
         >
           <Image
-            alt="about-img"
+            alt="image-à-propos"
             src="/portfolio-overview.jpg"
             width={500}
             height={500}
@@ -29,7 +29,7 @@ const About = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            About Me
+            À propos de moi
           </motion.h2>
 
           <motion.p

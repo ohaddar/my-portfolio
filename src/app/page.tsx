@@ -1,27 +1,42 @@
-import React from "react";
 import Head from "next/head";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import About from "@/components/about";
 import TechSkills from "@/components/techSkills";
 import Projects from "@/components/projects";
-import Contact from "@/components/contact";
+import { Experience } from "@/components/Experience";
+import { Education } from "@/components/Education";
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-gray-900 text-white">
       <Head>
-        <title>Mon Portfolio</title>
+        <title>Oumaima HADDAR</title>
         <meta name="description" content="Portfolio de développeur junior" />
       </Head>
-      <main className="min-h-screen bg-gray-100 text-gray-900">
-        <header className="p-6 bg-blue-600 text-white text-center">
-          <h1 className="text-4xl font-bold">Bienvenue sur mon portfolio</h1>
-        </header>
 
-        <About />
-        <TechSkills />
-        <Projects />
-        <Contact />
+      <Navbar />
+
+      <main className="container mx-auto px-6 py-38">
+        <section id="parcours">
+          <About />
+        </section>
+
+        <section id="skills">
+          <TechSkills />
+        </section>
+        <section id="experience">
+          <Experience />
+        </section>
+        <section id="formation">
+          <Education />
+        </section>
+        <section id="projects">
+          <Projects />
+        </section>
       </main>
+
+      <Footer />
     </div>
   );
 }

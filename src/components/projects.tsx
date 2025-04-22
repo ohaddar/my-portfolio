@@ -12,18 +12,18 @@ export default function Projects() {
       preview: "/chat-bot.png",
     },
     {
+      title: "Âme En Harmonie",
+      description:
+        "Développement complet d’une solution en ligne d’évaluation psychologique",
+      link: "https://front-ame-en-harmonie.vercel.app/",
+      preview: "/ame.png",
+    },
+    {
       title: "Restaurant Vitrine",
       description:
         "Site vitrine animé pour un restaurant, conçu pour mettre en valeur son ambiance et son menu avec un design interactif et attractif.",
       link: "https://restaurant-project-6i9a.vercel.app/#Accueil",
       preview: "/restaurant.png",
-    },
-    {
-      title: "To-Do List",
-      description:
-        "Une application simple et efficace de to-do list avec React.",
-      link: "https://todo-list-theta-brown.vercel.app/",
-      preview: "/todo-list.png",
     },
   ];
 

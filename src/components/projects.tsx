@@ -25,6 +25,13 @@ export default function Projects() {
       link: "https://restaurant-project-6i9a.vercel.app/#Accueil",
       preview: "/restaurant.png",
     },
+    {
+      title: "Task Manager",
+      description:
+        "Application de gestion de tâches avec une interface utilisateur intuitive, permettant aux utilisateurs de créer, modifier et supprimer des tâches facilement.",
+      link: "https://todo-list-theta-brown.vercel.app/",
+      preview: "/todo-list.png",
+    },
   ];
 
   return (

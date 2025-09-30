@@ -155,7 +155,7 @@ const Contact = () => {
                     LinkedIn
                   </h4>
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/oumaima-haddar"
                     className="hover:opacity-80 transition-opacity"
                     style={{ color: "var(--accent)" }}
                   >

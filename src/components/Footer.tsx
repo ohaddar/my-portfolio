@@ -46,7 +46,7 @@ const Footer = () => {
                   className="transition-colors hover:opacity-80"
                   style={{ color: "var(--text-secondary)" }}
                 >
-                  À propos
+                  Compétences
                 </a>
               </li>
               <li>

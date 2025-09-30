@@ -64,32 +64,65 @@ const Hero = () => {
             Passionnée par l&apos;innovation technologique, je transforme vos
             idées en{" "}
             <span style={{ color: "var(--accent)", fontWeight: "600" }}>
-              solutions digitales exceptionnelles
+              solutions digitales exceptionnelles .
             </span>
-            . Spécialisée en React, Next.js et architectures cloud scalables.
+            <br />
+            <span style={{ color: "var(--text-tertiary)", fontSize: "1rem" }}>
+              Voici un aperçu de mes compétences techniques principales&nbsp;:
+            </span>
           </p>
-          {/* Tech Stack */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
-            {[
-              "React",
-              "Next.js",
-              "TypeScript",
-              "Node.js",
-              "MongoDB",
-              "Python",
-            ].map((tech, index) => (
-              <span
-                key={index}
-                className="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105"
-                style={{
-                  backgroundColor: "var(--bg-tertiary)",
-                  color: "var(--text-tertiary)",
-                  border: "1px solid var(--border-primary)",
-                }}
-              >
-                {tech}
-              </span>
-            ))}
+          {/* Tech Stack (clarified) */}
+          <div className="mb-12 flex flex-col items-center">
+            <div className="flex flex-col md:flex-row md:space-x-12 w-full justify-center items-center gap-4">
+              <div className="flex flex-col items-center">
+                <span
+                  className="font-semibold text-base mb-2"
+                  style={{ color: "var(--accent)" }}
+                >
+                  Front-end
+                </span>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <span className="px-3 py-1 rounded-full bg-[var(--bg-tertiary)] text-[var(--text-tertiary)] border border-[var(--border-primary)] text-sm font-medium">
+                    React
+                  </span>
+                  <span className="px-3 py-1 rounded-full bg-[var(--bg-tertiary)] text-[var(--text-tertiary)] border border-[var(--border-primary)] text-sm font-medium">
+                    TypeScript
+                  </span>
+                </div>
+              </div>
+              <div className="flex flex-col items-center">
+                <span
+                  className="font-semibold text-base mb-2"
+                  style={{ color: "var(--accent)" }}
+                >
+                  Back-end
+                </span>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <span className="px-3 py-1 rounded-full bg-[var(--bg-tertiary)] text-[var(--text-tertiary)] border border-[var(--border-primary)] text-sm font-medium">
+                    Node.js (Express)
+                  </span>
+                  <span className="px-3 py-1 rounded-full bg-[var(--bg-tertiary)] text-[var(--text-tertiary)] border border-[var(--border-primary)] text-sm font-medium">
+                    Spring Boot
+                  </span>
+                </div>
+              </div>
+              <div className="flex flex-col items-center">
+                <span
+                  className="font-semibold text-base mb-2"
+                  style={{ color: "var(--accent)" }}
+                >
+                  Bases de données
+                </span>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <span className="px-3 py-1 rounded-full bg-[var(--bg-tertiary)] text-[var(--text-tertiary)] border border-[var(--border-primary)] text-sm font-medium">
+                    MongoDB
+                  </span>
+                  <span className="px-3 py-1 rounded-full bg-[var(--bg-tertiary)] text-[var(--text-tertiary)] border border-[var(--border-primary)] text-sm font-medium">
+                    PostgreSQL
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">

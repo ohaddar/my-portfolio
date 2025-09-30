@@ -6,12 +6,11 @@ const Experience = () => {
   const experiences = [
     {
       title: "Développeur Full Stack - Entrepreneur",
-      company: "Trading AI",
+      company: "Cluster Next",
       period: "Juin 2025 à Aujourd'hui",
       type: "Entrepreneuriat",
       description: [
         "Développement d'une application mobile React Native (Expo) pour l'interface et la visualisation",
-        "Création d'une API FastAPI robuste pour l'analyse, la génération et la diffusion de signaux de trading",
         "Intégration d'agents intelligents et de services d'analyse automatisée pour l'aide à la décision",
         "Déploiement de l'ensemble de la solution sur une infrastructure cloud scalable",
         "Utilisation des bonnes pratiques Agile/SCRUM pour la gestion du projet",
@@ -27,39 +26,26 @@ const Experience = () => {
     {
       title: "Développeur Full Stack",
       company: "OnRuntime Studio",
-      period: "Mars 2025 – Avril 2025",
-      type: "Bénévolat",
+      period: "Nov. 2024 – Avril 2025",
+      type: "Stage & Bénévolat",
       description: [
-        "Maintenance et évolution du site onRuntime.com",
-        "Amélioration des performances et du SEO",
-        "Collaboration en équipe Agile avec revues de code et normes clean code",
-      ],
-      technologies: ["React", "Next.js", "SEO", "Clean Code"],
-    },
-    {
-      title: "Développeuse Full Stack",
-      company: "OnRuntime Studio",
-      period: "Nov. 2024 – Fév. 2025",
-      type: "Stage",
-      description: [
-        "Conception et développement de la plateforme de réservation TonightPass.com",
+        "Conception, développement et maintenance des plateformes TonightPass.com et onRuntime.com",
         "Création d'interfaces responsives et optimisées pour mobile",
-        "Développement d'API REST et gestion des états côté front-end",
-        "Tests unitaires et tests end-to-end pour garantir la qualité",
+        "Développement d'API REST, gestion des états côté front-end et optimisation des performances",
+        "Amélioration du SEO et respect des normes clean code",
+        "Collaboration en équipe Agile avec revues de code",
+        "Mise en place de tests unitaires et end-to-end pour garantir la qualité",
       ],
-      technologies: ["React", "Node.js", "API REST", "Tests E2E", "Mobile"],
-    },
-    {
-      title: "Développeur Full Stack",
-      company: "Âme en Harmonie - Doranco",
-      period: "Juil. 2024 – Mars 2025",
-      type: "Projet académique",
-      description: [
-        "Développement d'une application web de suivi psychologique",
-        "Génération dynamique de rapports personnalisés et tableaux de bord d'administration",
-        "Intégration d'analyses statistiques et d'outils de gestion de contenu",
+      technologies: [
+        "React",
+        "Next.js",
+        "Node.js",
+        "API REST",
+        "Tests E2E",
+        "SEO",
+        "Clean Code",
+        "Mobile",
       ],
-      technologies: ["React", "Node.js", "MongoDB", "Analytics", "Reporting"],
     },
   ];
 

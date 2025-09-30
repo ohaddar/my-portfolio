@@ -89,7 +89,7 @@ const Contact = () => {
                     Email
                   </h4>
                   <p style={{ color: "var(--text-secondary)" }}>
-                    contact@oumaima-dev.com
+                    oumaima.haddar.pro@gmail.com
                   </p>
                 </div>
               </div>
@@ -159,7 +159,7 @@ const Contact = () => {
                     className="hover:opacity-80 transition-opacity"
                     style={{ color: "var(--accent)" }}
                   >
-                    @oumaima-dev
+                    @oumaima-haddar
                   </a>
                 </div>
               </div>

@@ -79,8 +79,7 @@ const Footer = () => {
           }}
         >
           <p style={{ color: "var(--text-secondary)" }}>
-            © 2025 Oumaima. Tous droits réservés. Développé avec ❤️ en React &
-            Next.js
+            © 2025 Oumaima. Tous droits réservés.
           </p>
         </div>
       </div>

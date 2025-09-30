@@ -20,26 +20,6 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Trading AI",
-      description:
-        "Application mobile React Native avec API FastAPI pour l'analyse et la génération de signaux de trading. Intégration d'agents intelligents pour l'aide à la décision.",
-      technologies: ["React Native", "FastAPI", "IA", "Cloud", "Expo"],
-      link: "#",
-      gradient: "linear-gradient(135deg, #10b981, #059669)",
-      status: "En développement",
-      category: "Mobile & IA",
-    },
-    {
-      title: "TonightPass",
-      description:
-        "Plateforme de réservation complète avec interfaces responsives et API REST. Tests unitaires et end-to-end pour garantir la qualité.",
-      technologies: ["React", "Node.js", "API REST", "Tests E2E"],
-      link: "#",
-      gradient: "linear-gradient(135deg, #3b82f6, #1d4ed8)",
-      status: "Terminé",
-      category: "Web Platform",
-    },
-    {
       title: "Âme En Harmonie",
       description:
         "Solution complète d'évaluation psychologique en ligne avec génération de rapports personnalisés et tableaux de bord d'administration.",

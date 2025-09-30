@@ -5,7 +5,7 @@ import React from "react";
 const Formation = () => {
   const education = [
     {
-      title: "Développeur Full Stack — Bac+4",
+      title: "Bachelor concepteur développeur applications — Bac+4",
       date: "2024",
       place: "Doranco",
       link: "#",

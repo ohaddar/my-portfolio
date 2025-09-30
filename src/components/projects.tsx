@@ -1,85 +1,206 @@
 "use client";
-import Image from "next/image";
-import { motion } from "framer-motion";
 
-export default function Projects() {
+import React, { useState } from "react";
+
+const Projects = () => {
+  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
+
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case "En ligne":
+        return "#10b981";
+      case "Terminé":
+        return "#3b82f6";
+      case "En développement":
+        return "#f59e0b";
+      default:
+        return "#64748b";
+    }
+  };
+
   const projects = [
     {
-      title: "Chatbot intelligent",
+      title: "Trading AI",
       description:
-        "Chatbot intelligent répondant aux questions sur React.js, facilitant ainsi l’apprentissage de la bibliothèque.",
-      link: "https://react-kitchn-chat.vercel.app/",
-      preview: "/chat-bot.png",
+        "Application mobile React Native avec API FastAPI pour l'analyse et la génération de signaux de trading. Intégration d'agents intelligents pour l'aide à la décision.",
+      technologies: ["React Native", "FastAPI", "IA", "Cloud", "Expo"],
+      link: "#",
+      gradient: "linear-gradient(135deg, #10b981, #059669)",
+      status: "En développement",
+      category: "Mobile & IA",
+    },
+    {
+      title: "TonightPass",
+      description:
+        "Plateforme de réservation complète avec interfaces responsives et API REST. Tests unitaires et end-to-end pour garantir la qualité.",
+      technologies: ["React", "Node.js", "API REST", "Tests E2E"],
+      link: "#",
+      gradient: "linear-gradient(135deg, #3b82f6, #1d4ed8)",
+      status: "Terminé",
+      category: "Web Platform",
     },
     {
       title: "Âme En Harmonie",
       description:
-        "Développement complet d’une solution en ligne d’évaluation psychologique",
+        "Solution complète d'évaluation psychologique en ligne avec génération de rapports personnalisés et tableaux de bord d'administration.",
+      technologies: ["React", "Node.js", "MongoDB", "Analytics"],
       link: "https://front-ame-en-harmonie.vercel.app/",
-      preview: "/ame.png",
+      gradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)",
+      status: "En ligne",
+      category: "Healthcare Tech",
     },
     {
-      title: "Restaurant Vitrine",
+      title: "Chatbot intelligent React",
       description:
-        "Site vitrine animé pour un restaurant, conçu pour mettre en valeur son ambiance et son menu avec un design interactif et attractif.",
-      link: "https://restaurant-project-6i9a.vercel.app/#Accueil",
-      preview: "/restaurant.png",
-    },
-    {
-      title: "Task Manager",
-      description:
-        "Application de gestion de tâches avec une interface utilisateur intuitive, permettant aux utilisateurs de créer, modifier et supprimer des tâches facilement.",
-      link: "https://todo-list-theta-brown.vercel.app/",
-      preview: "/todo-list.png",
+        "Chatbot intelligent spécialisé dans l'aide à l'apprentissage de React.js, facilitant la compréhension de la bibliothèque.",
+      technologies: ["React", "IA", "Chat", "Education"],
+      link: "https://react-kitchn-chat.vercel.app/",
+      gradient: "linear-gradient(135deg, #f59e0b, #d97706)",
+      status: "En ligne",
+      category: "AI & Education",
     },
   ];
 
   return (
-    <section className="py-16 px-4 bg-gray-900 text-white" id="projects">
-      <motion.h2
-        className="text-3xl font-bold text-center mb-12"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        Mes Projets
-      </motion.h2>
-
-      <div className="flex flex-col gap-10 items-center">
-        {projects.map((project, index) => (
-          <motion.a
-            key={index}
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full max-w-3xl bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-teal-500 transition-all"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: index * 0.2 }}
-            whileHover={{ scale: 1.01 }}
+    <section id="projets" className="section section-alt pt-16">
+      <div className="max-w-6xl mx-auto px-6">
+        {/* Section Header */}
+        <div className="text-center mb-16 animate-fadeInUp">
+          <h2
+            className="text-4xl md:text-5xl font-bold mb-6"
+            style={{ color: "var(--text-primary)" }}
           >
-            <div className="md:flex">
-              <motion.div
-                className="md:w-1/2"
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300 }}
+            Mes{" "}
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Projets
+            </span>
+          </h2>
+          <p
+            className="text-lg max-w-2xl mx-auto leading-relaxed"
+            style={{ color: "var(--text-secondary)" }}
+          >
+            Une collection de projets qui allient innovation technique et impact
+            utilisateur
+          </p>
+        </div>
+
+        {/* Projects Grid */}
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="card group animate-fadeInUp overflow-hidden"
+              style={{ animationDelay: `${index * 0.1}s` }}
+              onMouseEnter={() => setHoveredProject(index)}
+              onMouseLeave={() => setHoveredProject(null)}
+            >
+              {/* Status Badge */}
+              <div className="relative z-10 flex justify-end">
+                <div
+                  className="px-3 py-1 rounded-full text-xs font-bold text-white mt-6 mr-6"
+                  style={{ backgroundColor: getStatusColor(project.status) }}
+                >
+                  {project.status}
+                </div>
+              </div>
+
+              {/* Project Visual */}
+              <div
+                className="relative h-48 rounded-t-2xl overflow-hidden"
+                style={{ background: project.gradient }}
               >
-                <Image
-                  src={project.preview}
-                  alt={`Aperçu de ${project.title}`}
-                  width={500}
-                  height={300}
-                  className="object-cover w-full h-60 md:h-full"
-                />
-              </motion.div>
-              <div className="p-6 md:w-1/2 flex flex-col justify-center">
-                <h3 className="text-2xl font-semibold mb-3">{project.title}</h3>
-                <p className="text-gray-300">{project.description}</p>
+                <div className="absolute inset-0 bg-black/10"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-white/40 text-5xl font-bold">
+                    {project.title
+                      .split(" ")
+                      .map((word) => word[0])
+                      .join("")}
+                  </div>
+                </div>
+
+                {/* Hover Overlay */}
+                <div
+                  className={`absolute inset-0 bg-gradient-to-t from-black/50 to-transparent transition-all duration-300 ${
+                    hoveredProject === index ? "opacity-100" : "opacity-0"
+                  }`}
+                >
+                  <div className="absolute bottom-4 left-4 right-4">
+                    {project.link !== "#" && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-lg hover:bg-white/30 transition-all duration-300"
+                      >
+                        <svg
+                          className="w-4 h-4 mr-2"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
+                        Explorer
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="p-6">
+                <div className="mb-4">
+                  <span
+                    className="text-xs font-medium uppercase tracking-wider"
+                    style={{ color: "var(--text-tertiary)" }}
+                  >
+                    {project.category}
+                  </span>
+                </div>
+
+                <h3
+                  className="text-xl font-bold mb-3 group-hover:text-[var(--accent)] transition-colors"
+                  style={{ color: "var(--text-primary)" }}
+                >
+                  {project.title}
+                </h3>
+
+                <p
+                  className="mb-6 leading-relaxed"
+                  style={{ color: "var(--text-secondary)" }}
+                >
+                  {project.description}
+                </p>
+
+                {/* Technologies */}
+                <div className="flex flex-wrap gap-2">
+                  {project.technologies.map((tech, techIndex) => (
+                    <span
+                      key={techIndex}
+                      className="px-3 py-1 rounded-full text-sm font-medium transition-all duration-300"
+                      style={{
+                        backgroundColor: "var(--bg-tertiary)",
+                        color: "var(--text-tertiary)",
+                        border: "1px solid var(--border-primary)",
+                      }}
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
-          </motion.a>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
-}
+};
+
+export default Projects;

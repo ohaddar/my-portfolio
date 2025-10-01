@@ -22,7 +22,7 @@ const Projects = () => {
     {
       title: "Âme En Harmonie",
       description:
-        "Solution complète d'évaluation psychologique en ligne avec génération de rapports personnalisés et tableaux de bord d'administration.",
+        "Plateforme innovante d'évaluation psychologique en ligne, conçue pour offrir un accompagnement personnalisé et sécurisé à chaque utilisateur. Grâce à une interface intuitive, elle permet de réaliser des bilans complets, de générer des rapports détaillés et de suivre l'évolution via des tableaux de bord dynamiques. Idéale pour les professionnels de santé comme pour les particuliers soucieux de leur bien-être mental, cette solution allie technologie de pointe et accessibilité pour démocratiser l'accès à la santé psychologique.",
       technologies: ["React", "Node.js", "MongoDB", "Analytics"],
       link: "https://front-ame-en-harmonie.vercel.app/",
       gradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)",
@@ -32,11 +32,11 @@ const Projects = () => {
     {
       title: "Chatbot intelligent React",
       description:
-        "Chatbot intelligent spécialisé dans l'aide à l'apprentissage de React.js, facilitant la compréhension de la bibliothèque.",
+        "Assistant conversationnel nouvelle génération dédié à l'apprentissage de React.js. Ce projet est actuellement en cours de développement : une première version fonctionnelle est déjà accessible en ligne, permettant aux utilisateurs de découvrir des concepts clés, des exemples pratiques et de bénéficier de conseils personnalisés. De nouvelles fonctionnalités et optimisations sont en préparation pour enrichir l'expérience et répondre encore mieux aux besoins des apprenants, qu'ils soient débutants ou confirmés. Suivez l'évolution de ce chatbot pour profiter d'un accompagnement toujours plus complet dans votre parcours React !",
       technologies: ["React", "IA", "Chat", "Education"],
       link: "https://react-kitchn-chat.vercel.app/",
       gradient: "linear-gradient(135deg, #f59e0b, #d97706)",
-      status: "En ligne",
+  status: "En ligne – développement continu",
       category: "AI & Education",
     },
   ];
